@@ -1,0 +1,13 @@
+JsonSlurper slurper = new JsonSlurper()
+Map parsedJson = slurper.parseText(response_delete.getResponseText())
+String delete_status = parsedJson.status_message
+
+GlobalVariable.deleteResponse = delete_status
+
+
+
+def jsonSlurper = new JsonSlurper()
+def jsonResponse = jsonSlurper.parseText(response_delete.getResponseText())
+def delete_status_message = jsonResponse.status_message
+
+GlobalVariable.deleteResponse = delete_status_message
