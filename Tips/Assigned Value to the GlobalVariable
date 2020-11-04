@@ -6,6 +6,7 @@ GlobalVariable.deleteResponse = delete_status
 
 
 
+
 def jsonSlurper = new JsonSlurper()
 def jsonResponse = jsonSlurper.parseText(response_delete.getResponseText())
 def delete_status_message = jsonResponse.status_message
